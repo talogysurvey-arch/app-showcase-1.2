@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Apple, Play } from "lucide-react";
 import heroPhoneMockup from "@/assets/hero-phone-mockup.png";
+import apple from "@/assets/apple.png";
+import play from "@/assets/play.png";
 
 const IOS_APP_URL =
   "https://apps.apple.com/us/app/business-psychologist-me/id6757138241";
@@ -79,11 +81,11 @@ const Hero = () => {
               }}
             >
               <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer">
-                <Button variant="store" size="lg" className="gap-3">
-                  <Apple className="w-6 h-6" />
+                <Button variant="store" size="lg" className="gap-3 bg-black">
+                  <img src={apple} alt="BPME Logo" className="h-8 w-auto" />
                   <div className="text-left">
                     <span className="block text-xs opacity-80">
-                      Download on
+                      Download on the
                     </span>
                     <span className="block font-semibold text-base">
                       App Store
@@ -91,13 +93,14 @@ const Hero = () => {
                   </div>
                 </Button>
               </a>
+
               <a
                 href={ANDROID_APP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button variant="storeOutline" size="lg" className="gap-3">
-                  <Play className="w-6 h-6 fill-current" />
+                <Button variant="store" size="lg" className="gap-3 bg-black">
+                  <img src={play} alt="BPME Logo" className="h-10 w-auto" />
                   <div className="text-left">
                     <span className="block text-xs opacity-80">Get it on</span>
                     <span className="block font-semibold text-base">

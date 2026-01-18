@@ -3,8 +3,13 @@ import { Apple, Play, Smartphone } from "lucide-react";
 import { useEffect, useRef } from "react";
 import QRCode from "qrcode";
 
-const IOS_APP_URL = "https://apps.apple.com/us/app/business-psychologist-me/id6757138241";
-const ANDROID_APP_URL = "https://play.google.com/store/apps/details?id=com.businesspsychologistme.Business_Psychologist_ME";
+import apple from "@/assets/apple.png";
+import play from "@/assets/play.png";
+
+const IOS_APP_URL =
+  "https://apps.apple.com/us/app/business-psychologist-me/id6757138241";
+const ANDROID_APP_URL =
+  "https://play.google.com/store/apps/details?id=com.businesspsychologistme.Business_Psychologist_ME";
 
 const DownloadCTA = () => {
   const iosQrRef = useRef<HTMLCanvasElement>(null);
@@ -16,9 +21,9 @@ const DownloadCTA = () => {
         width: 100,
         margin: 1,
         color: {
-          dark: '#193B3C',
-          light: '#FFFFFF'
-        }
+          dark: "#193B3C",
+          light: "#FFFFFF",
+        },
       });
     }
     if (androidQrRef.current) {
@@ -26,9 +31,9 @@ const DownloadCTA = () => {
         width: 100,
         margin: 1,
         color: {
-          dark: '#193B3C',
-          light: '#FFFFFF'
-        }
+          dark: "#193B3C",
+          light: "#FFFFFF",
+        },
       });
     }
   }, []);
@@ -43,33 +48,52 @@ const DownloadCTA = () => {
         <div className="glass-card rounded-[2.5rem] p-8 md:p-12 lg:p-16 text-center max-w-4xl mx-auto border-primary/10">
           {/* Content */}
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Ready to{' '}
-            <span className="text-teal">Get Started?</span>
+            Ready to <span className="text-teal">Get Started?</span>
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto text-balance">
-            Join thousands of business psychology professionals already growing their careers with BPME
+            Join thousands of business psychology professionals already growing
+            their careers with BPME
           </p>
 
           {/* App Store buttons */}
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="store" size="lg" className="gap-3">
-                <Apple className="w-6 h-6" />
+              <Button variant="store" size="lg" className="gap-3 bg-black">
+                <img src={apple} alt="BPME Logo" className="h-8 w-auto" />
                 <div className="text-left">
-                  <span className="block text-xs opacity-80">Download on</span>
-                  <span className="block font-semibold text-base">App Store</span>
+                  <span className="block text-xs opacity-80">
+                    Download on the
+                  </span>
+                  <span className="block font-semibold text-base">
+                    App Store
+                  </span>
                 </div>
               </Button>
             </a>
+
             <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="store" size="lg" className="gap-3 bg-black">
+                <img src={play} alt="BPME Logo" className="h-10 w-auto" />
+                <div className="text-left">
+                  <span className="block text-xs opacity-80">Get it on</span>
+                  <span className="block font-semibold text-base">
+                    Google Play
+                  </span>
+                </div>
+              </Button>
+            </a>
+
+            {/*<a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
               <Button variant="storeOutline" size="lg" className="gap-3">
                 <Play className="w-6 h-6 fill-current" />
                 <div className="text-left">
                   <span className="block text-xs opacity-80">Get it on</span>
-                  <span className="block font-semibold text-base">Google Play</span>
+                  <span className="block font-semibold text-base">
+                    Google Play
+                  </span>
                 </div>
               </Button>
-            </a>
+            </a>*/}
           </div>
 
           {/* QR Codes */}
