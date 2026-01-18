@@ -58,8 +58,16 @@ const DownloadCTA = () => {
           {/* App Store buttons */}
           <div className="flex flex-wrap gap-4 justify-center mb-12">
             <a href={IOS_APP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="store" size="lg" className="gap-3 bg-black">
-                <img src={apple} alt="BPME Logo" className="h-8 w-auto" />
+              <Button
+                variant="store"
+                size="lg"
+                className="gap-3 bg-black hover:bg-black"
+              >
+                <img
+                  src={apple}
+                  alt="ios official icon"
+                  className="h-8 w-auto"
+                />
                 <div className="text-left">
                   <span className="block text-xs opacity-80">
                     Download on the
@@ -72,8 +80,16 @@ const DownloadCTA = () => {
             </a>
 
             <a href={ANDROID_APP_URL} target="_blank" rel="noopener noreferrer">
-              <Button variant="store" size="lg" className="gap-3 bg-black">
-                <img src={play} alt="BPME Logo" className="h-10 w-auto" />
+              <Button
+                variant="store"
+                size="lg"
+                className="gap-3 bg-black hover:bg-black"
+              >
+                <img
+                  src={play}
+                  alt="android official icon"
+                  className="h-10 w-auto"
+                />
                 <div className="text-left">
                   <span className="block text-xs opacity-80">Get it on</span>
                   <span className="block font-semibold text-base">
